@@ -1,0 +1,94 @@
+﻿<Window x:Class="AudVidApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Управление устройствами" Height="600" Width="800">
+    <Grid Margin="10">
+        <!-- Вкладки -->
+        <TabControl x:Name="DeviceTabs" Margin="5">
+            <!-- Вкладка для телевизоров -->
+            <TabItem Header="Телевизоры">
+                <Grid Margin="10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="300">
+                        <TextBlock Text="Модель:" Margin="5" />
+                        <TextBox x:Name="TvModelTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Производитель:" Margin="5" />
+                        <TextBox x:Name="TvManufacturerTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Цена:" Margin="5" />
+                        <TextBox x:Name="TvPriceTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Год:" Margin="5" />
+                        <TextBox x:Name="TvYearTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Размер экрана (дюймы):" Margin="5" />
+                        <TextBox x:Name="TvScreenSizeTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Разрешение:" Margin="5" />
+                        <TextBox x:Name="TvResolutionTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Тип матрицы:" Margin="5" />
+                        <TextBox x:Name="TvMatrixTypeTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="ОЗУ (ГБ):" Margin="5" />
+                        <TextBox x:Name="TvRamTextBox" Margin="5" Width="200" />
+
+                        <Button Content="Добавить телевизор" Width="200" Margin="5" Click="AddTv_Click" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка для радиоприемников -->
+            <TabItem Header="Радиоприемники">
+                <Grid Margin="10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="300">
+                        <TextBlock Text="Модель:" Margin="5" />
+                        <TextBox x:Name="RadioModelTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Производитель:" Margin="5" />
+                        <TextBox x:Name="RadioManufacturerTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Цена:" Margin="5" />
+                        <TextBox x:Name="RadioPriceTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Год:" Margin="5" />
+                        <TextBox x:Name="RadioYearTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Количество предустановок:" Margin="5" />
+                        <TextBox x:Name="RadioPresetsTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Емкость аккумулятора (мАч):" Margin="5" />
+                        <TextBox x:Name="RadioBatteryTextBox" Margin="5" Width="200" />
+
+                        <Button Content="Добавить радиоприемник" Width="200" Margin="5" Click="AddRadio_Click" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+
+            <!-- Вкладка для прочей техники -->
+            <TabItem Header="Прочая техника">
+                <Grid Margin="10">
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="300">
+                        <TextBlock Text="Модель:" Margin="5" />
+                        <TextBox x:Name="OtherModelTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Производитель:" Margin="5" />
+                        <TextBox x:Name="OtherManufacturerTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Цена:" Margin="5" />
+                        <TextBox x:Name="OtherPriceTextBox" Margin="5" Width="200" />
+
+                        <TextBlock Text="Год:" Margin="5" />
+                        <TextBox x:Name="OtherYearTextBox" Margin="5" Width="200" />
+
+                        <Button Content="Добавить устройство" Width="200" Margin="5" Click="AddOther_Click" />
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <!-- Список устройств -->
+        <ListBox x:Name="DevicesListBox" Margin="320,10,10,10" />
+        <Button Content="Удалить" Width="100" Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="RemoveSelected_Click" />
+    </Grid>
+</Window>
